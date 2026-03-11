@@ -5,10 +5,14 @@
   "main": "monitor.js",
   "scripts": {
     "start": "node monitor.js",
-    "dev": "node monitor.js --once"
+    "dev": "node monitor.js --once",
+    "pm2": "pm2 start ecosystem.config.cjs"
   },
   "dependencies": {
     "dotenv": "^16.4.7",
     "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "pm2": "^5.4.3"
   }
 }

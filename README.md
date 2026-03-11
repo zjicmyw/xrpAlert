@@ -8,8 +8,10 @@
 
 ```bash
 npm install
-npm start
+npm run pm2
 ```
+
+或直接运行（无 PM2）：`npm start`
 
 ## 配置
 
@@ -34,8 +36,20 @@ npm start
 
 ## 运行模式
 
-- `npm start` — 持续监控，每 4 小时检查一次
+- `npm run pm2` — 使用 PM2 启动并常驻（推荐）
+- `npm start` — 前台运行，每 4 小时检查一次
 - `npm run dev` — 单次检查后退出
+
+### PM2 常用命令
+
+```bash
+pm2 list              # 查看进程
+pm2 logs xrp-alert    # 查看日志
+pm2 stop xrp-alert    # 停止
+pm2 restart xrp-alert # 重启
+pm2 delete xrp-alert  # 移除
+pm2 save              # 保存当前进程列表（开机自启需配合 pm2 startup）
+```
 
 ## Telegram 接口
 

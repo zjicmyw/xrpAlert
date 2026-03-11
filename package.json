@@ -1,0 +1,14 @@
+{
+  "name": "xrp-alert",
+  "version": "1.0.0",
+  "description": "Monitor XRP Ledger payments_count and alert via Telegram when threshold exceeded",
+  "main": "monitor.js",
+  "scripts": {
+    "start": "node monitor.js",
+    "dev": "node monitor.js --once"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "node-fetch": "^2.7.0"
+  }
+}
